@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>All Items</h2>
+
+{% if items %}
+    <div class="item-list">
+        {% for item in items %}
+            <div class="card {% if item.completed %}completed{% endif %}">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.description }}</p>
+
+                <p><strong>Type:</strong> {{ item.item_type }}</p>
+
+                {% if item.item_type == "task" %}
+                    <p><strong>Priority:</strong> {{ item.priority }}</p>
+                {% elif item.item_type == "habit" %}
+                    <p><strong>Streak:</strong> {{ item.streak }}</p>
+                {% elif item.item_type == "deadline" %}
+                    <p><strong>Due Date:</strong> {{ item.due_date }}</p>
+                {% endif %}
+
+                <p>
+                    <strong>Status:</strong>
+                    {% if item.completed %}
+                        Completed
+                    {% else %}
+                        Not Completed
+                    {% endif %}
+                </p>
+
+                <div class="button-group">
+                    {% if not item.completed %}
+                        <a class="btn complete" href="{{ url_for('complete', index=loop.index0) }}">Mark Complete</a>
+                    {% endif %}
+                    <a class="btn delete" href="{{ url_for('delete', index=loop.index0) }}">Delete</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% else %}
+    <p>No items yet. Create one.</p>
+{% endif %}
+{% endblock %}
