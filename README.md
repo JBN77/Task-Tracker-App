@@ -74,14 +74,17 @@ Task Tracker App/
 
 ## Application Routes
 
-Route Method Description
-/ GET Display all tasks
-/create GET, POST Create a new task
-/complete/<id> GET Mark a task as complete
+## 🔗 Application Routes
+
+| Route            | Method    | Description             |
+| ---------------- | --------- | ----------------------- |
+| `/`              | GET       | Display all tasks       |
+| `/create`        | GET, POST | Create a new task       |
+| `/complete/<id>` | GET       | Mark a task as complete |
 
 ## Requirements
 
-- ython 3.x
+- python 3.x
 - pip
 
 ## Future Improvements
