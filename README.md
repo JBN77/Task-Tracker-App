@@ -72,30 +72,35 @@ Task Tracker App/
 - Tasks are stored in data.json
 - HTML templates render dynamic content using Flask’s templating engine
 
-Application Routes
+## Application Routes
+
 Route Method Description
 / GET Display all tasks
 /create GET, POST Create a new task
 /complete/<id> GET Mark a task as complete
 
-Requirements
-Python 3.x
-pip
+## Requirements
 
-Future Improvements
-Edit tasks
-Delete tasks
-Add due dates
-Add task priority levels
-Replace JSON storage with a database (SQLite/PostgreSQL)
-User authentication (login/signup)
-REST API version of the app
+- ython 3.x
+- pip
 
-Notes
+## Future Improvements
+
+- Edit tasks
+- Delete tasks
+- Add due dates
+- Add task priority levels
+- Replace JSON storage with a database (SQLite/PostgreSQL)
+- User authentication (login/signup)
+- REST API version of the app
+
+## Notes
+
 This project is a beginner-friendly Flask application designed to demonstrate:
-Backend development with Python
-Web routing and request handling
-Template rendering
-Basic application structure
+
+- Backend development with Python
+- Web routing and request handling
+- Template rendering
+- Basic application structure
 
 It can be extended into a full-stack production-ready application.
