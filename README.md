@@ -74,8 +74,6 @@ Task Tracker App/
 
 ## Application Routes
 
-## 🔗 Application Routes
-
 | Route            | Method    | Description             |
 | ---------------- | --------- | ----------------------- |
 | `/`              | GET       | Display all tasks       |
